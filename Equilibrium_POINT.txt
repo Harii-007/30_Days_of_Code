@@ -1,0 +1,47 @@
+Your Task:
+The task is to complete the function equilibriumPoint() which takes the array and n as input parameters and returns the point of equilibrium. Return -1 if no such point exists.
+
+Expected Time Complexity: O(n)
+Expected Auxiliary Space: O(1)
+
+Constraints:
+1 <= n <= 106
+1 <= A[i] <= 108
+
+
+class Solution{
+    public:
+    // Function to find equilibrium point in the array.
+    // a: input array
+    // n: size of array
+    int equilibriumPoint(long long a[], int n) {
+    
+        // Your code here
+       int leftsum=0;
+       int rightsum=0;
+       int sum=0;
+       
+       for(int i=0;i<n;i++)
+       {
+           sum+=a[i];
+       }
+       
+       
+       
+       for(int i=0;i<n;i++)
+       {
+            sum-=a[i];
+            if(leftsum==sum){
+                return i+1;
+            }
+            leftsum+=a[i];
+       }
+       
+       
+       return -1;
+       
+        
+        
+    }
+
+};
