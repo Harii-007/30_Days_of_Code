@@ -1,0 +1,28 @@
+PRIME NO
+
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  int flag=0;
+  if (n == 1 || n == 0) {
+    cout << "Not a prime no";
+  }
+
+  for (int i = 2; i < sqrt(n) + 1; i++) {
+    if (n % i == 0 && i != n) {
+      cout << "Not a prime no";
+      flag=1;
+      
+      break;
+    }
+  }
+  if(flag==0)
+  {
+        cout << "Its a prime no.";
+  }
+
+}
