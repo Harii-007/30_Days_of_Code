@@ -1,0 +1,19 @@
+
+
+
+class Solution{
+    public:
+    
+    //Function to rotate an array by d elements in counter-clockwise direction. 
+    void rotateArr(int a[], int d, int n){
+        // code here
+        
+        if(d>n/2){
+            d=d%n;
+        }
+        
+        reverse(a,a+n);
+        reverse(a,a+n-d);
+       reverse(a+n-d,a+n);
+    }
+};
