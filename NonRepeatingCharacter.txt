@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+ unordered_map<char,int>mp;
+ string a;
+ cout<<"enter the string\n";
+ cin>>a;
+ int flag=0;
+ int n=a.length();
+ for(int i=0;i<n;i++)
+ {
+     mp[a[i]]++;
+ }
+ char c;
+ for(int i=0;i<n;i++)
+ {
+     if(mp[a[i]]==1)
+     {
+         c=a[i];
+         flag=1;
+         break;
+     }
+ }
+ if(flag)
+ {
+     cout<<c;
+ }
+ else{
+     cout<<-1;
+ }
+}
+}
